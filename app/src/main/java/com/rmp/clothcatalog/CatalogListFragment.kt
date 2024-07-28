@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.rmp.clothcatalog.databinding.FragmentCatalogListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CatalogListFragment : Fragment() {
 
     private val binding: FragmentCatalogListBinding by lazy {
