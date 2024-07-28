@@ -60,6 +60,11 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.dagger.hilt.compiler)
 
+    implementation(libs.retrofit)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp3.logging.interceptor)
+    implementation(libs.converter.gson)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
