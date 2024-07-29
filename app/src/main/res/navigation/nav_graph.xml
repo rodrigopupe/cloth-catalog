@@ -7,8 +7,29 @@
 
     <fragment
         android:id="@+id/fragment_catalog_list"
-        android:name="com.rmp.clothcatalog.view.CatalogListFragment"
+        android:name="com.rmp.clothcatalog.view.fragments.CatalogListFragment"
         android:label="CatalogList"
-        tools:layout="@layout/fragment_catalog_list" />
+        tools:layout="@layout/fragment_catalog_list">
+
+        <action
+            android:id="@+id/action_catalog_list_to_product_details"
+            app:destination="@id/fragment_product_details"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_product_details"
+        android:name="com.rmp.clothcatalog.view.fragments.ProductDetailsFragment"
+        android:label="ProductDetails"
+        tools:layout="@layout/fragment_product_details">
+
+        <argument
+            android:name="product"
+            app:argType="com.rmp.clothcatalog.view.model.ProductUIModel"
+            app:nullable="false" />
+
+    </fragment>
 
 </navigation>
