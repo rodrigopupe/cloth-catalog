@@ -71,6 +71,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     kapt(libs.androidx.lifecycle.compiler)
 
+    implementation(libs.picasso)
+
     testImplementation(libs.androidx.core.testing)
     testImplementation(libs.androidx.lifecycle.runtime.testing)
 
