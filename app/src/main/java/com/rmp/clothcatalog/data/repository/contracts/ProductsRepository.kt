@@ -1,7 +1,7 @@
 package com.rmp.clothcatalog.data.repository.contracts
 
-import com.rmp.clothcatalog.data.model.ProductResponseModel
+import com.rmp.clothcatalog.view.model.ProductUIModel
 
 interface ProductsRepository {
-    suspend fun getProductsList() : List<ProductResponseModel>
+    suspend fun getProductsList() : List<ProductUIModel>
 }
