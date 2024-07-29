@@ -1,6 +1,9 @@
 package com.rmp.clothcatalog.view.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ProductUIModel(
     val id: Long,
     val title: String,
@@ -9,10 +12,12 @@ data class ProductUIModel(
     val category: String,
     val imageUrl: String,
     val rating: Rating
-) {
+) : Parcelable {
+
+    @Parcelize
     data class Rating(
         val rate: Float,
         val count: Int
-    )
+    ) : Parcelable
 }
 
