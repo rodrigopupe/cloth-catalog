@@ -10,6 +10,7 @@ import com.rmp.clothcatalog.data.repository.contracts.ProductsRepository
 import com.rmp.clothcatalog.utils.BaseState
 import com.rmp.clothcatalog.view.model.ProductUIModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,9 +24,10 @@ class CatalogListViewModel @Inject constructor(
     val productsResponse: LiveData<BaseState<List<ProductUIModel>>>
         get() = _productsResponse
 
-    private fun getProductsList() {
-        _productsResponse.value = BaseState.Loading
+    fun getProductsList() {
         viewModelScope.launch {
+            _productsResponse.value = BaseState.Loading
+            delay(3000) // Pra dar tempo do Loading ser exibido na tela rs
             try {
                 val data = productsRepository.getProductsList()
                 _productsResponse.value = BaseState.Success(data)
