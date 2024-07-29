@@ -2,7 +2,7 @@ package com.rmp.clothcatalog.data.repository
 
 import com.rmp.clothcatalog.data.api.ProductsService
 import com.rmp.clothcatalog.data.repository.contracts.ProductsRepository
-import com.rmp.clothcatalog.parser.toUiModel
+import com.rmp.clothcatalog.domain.mapper.ProductDataMapper
 import com.rmp.clothcatalog.view.model.ProductUIModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -17,6 +17,7 @@ class ProductsRepositoryImpl @Inject constructor(
             service.getProductsList()
         }
 
-        return result.map { it.toUiModel() }
+        val mapper = ProductDataMapper()
+        return result.map { mapper.fromRemote(it) }
     }
 }
