@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_catalog_list"
-        android:name="com.rmp.clothcatalog.CatalogListFragment"
+        android:name="com.rmp.clothcatalog.view.CatalogListFragment"
         android:label="CatalogList"
         tools:layout="@layout/fragment_catalog_list" />
 

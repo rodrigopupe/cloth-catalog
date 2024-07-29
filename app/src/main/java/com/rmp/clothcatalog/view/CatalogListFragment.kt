@@ -1,4 +1,4 @@
-package com.rmp.clothcatalog
+package com.rmp.clothcatalog.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
