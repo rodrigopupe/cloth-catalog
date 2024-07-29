@@ -64,6 +64,14 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.okhttp3.logging.interceptor)
     implementation(libs.converter.gson)
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    kapt(libs.androidx.lifecycle.compiler)
+
+    testImplementation(libs.androidx.core.testing)
+    testImplementation(libs.androidx.lifecycle.runtime.testing)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
