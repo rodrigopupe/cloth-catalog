@@ -9,19 +9,17 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvErrorMessage"
+        style="@style/errorStateMessageStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:padding="@dimen/titleSpacing"
-        android:textAlignment="center"
-        android:textSize="24sp"
         tools:text="Ocorreu um erro!" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btTryAgain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing"
+        android:layout_marginTop="@dimen/spacing_small"
         android:text="@string/try_again_label" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

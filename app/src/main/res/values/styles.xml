@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="productListTitleStyle">
+        <item name="android:padding">@dimen/spacing_small</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <style name="errorStateMessageStyle">
+        <item name="android:padding">@dimen/spacing_small</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <style name="itemProductNameStyle">
+        <item name="android:textSize">@dimen/font_size_extra_small</item>
+    </style>
+
+    <style name="itemProductPriceStyle">
+        <item name="android:textSize">@dimen/font_size_nano</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="itemProductRatingStyle">
+        <item name="android:textSize">@dimen/font_size_quark</item>
+    </style>
+
+    <style name="productDetailTitleStyle">
+        <item name="android:textSize">@dimen/font_size_ultra_small</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="productDetailDescriptionStyle">
+        <item name="android:textSize">@dimen/font_size_nano</item>
+    </style>
+
+    <style name="productDetailFieldLabelStyle">
+        <item name="android:textSize">@dimen/font_size_nano</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="productDetailFieldStyle">
+        <item name="android:textSize">@dimen/font_size_nano</item>
+    </style>
+
+    <style name="productDetailPriceStyle">
+        <item name="android:textSize">@dimen/font_size_ultra_small</item>
+    </style>
+
+</resources>

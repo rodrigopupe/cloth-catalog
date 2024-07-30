@@ -9,16 +9,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp">
+        android:paddingHorizontal="@dimen/spacing_extra_small">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvProductName"
+            style="@style/productDetailTitleStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/spacing_extra_small"
             android:textAlignment="center"
-            android:textSize="22sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +27,7 @@
             android:id="@+id/ivProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="@dimen/spacing_huge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvProductName"
@@ -36,10 +35,10 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvProductDescription"
+            style="@style/productDetailDescriptionStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:textSize="14sp"
+            android:layout_marginTop="@dimen/spacing_huge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivProduct"
@@ -47,21 +46,20 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvCategoryLabel"
+            style="@style/productDetailFieldLabelStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/spacing_small"
             android:text="@string/category_label"
-            android:textSize="14sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvProductDescription" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvCategory"
+            style="@style/productDetailFieldStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="14sp"
+            android:layout_marginStart="@dimen/spacing_nano"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvCategoryLabel"
             app:layout_constraintTop_toTopOf="@id/tvCategoryLabel"
@@ -69,21 +67,20 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvPriceLabel"
+            style="@style/productDetailFieldLabelStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="@dimen/spacing_huge"
             android:text="@string/price_label"
-            android:textSize="14sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvCategoryLabel" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvPrice"
+            style="@style/productDetailPriceStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="20sp"
+            android:layout_marginStart="@dimen/spacing_nano"
             app:layout_constraintBottom_toBottomOf="@id/tvPriceLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvPriceLabel"
@@ -92,22 +89,21 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvProductRateLabel"
+            style="@style/productDetailFieldLabelStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/spacing_medium"
             android:text="@string/rating_label"
-            android:textSize="14sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/tvPriceLabel"
             app:layout_constraintTop_toBottomOf="@id/tvPriceLabel" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvProductRate"
+            style="@style/productDetailFieldStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="14sp"
+            android:layout_marginStart="@dimen/spacing_nano"
             app:layout_constraintBottom_toBottomOf="@id/tvProductRateLabel"
             app:layout_constraintStart_toEndOf="@id/tvProductRateLabel"
             app:layout_constraintTop_toTopOf="@id/tvProductRateLabel"
@@ -117,8 +113,8 @@
             android:id="@+id/ivRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="16dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginVertical="@dimen/spacing_extra_small"
+            android:layout_marginStart="@dimen/spacing_quark"
             app:layout_constraintBottom_toBottomOf="@id/tvProductRateLabel"
             app:layout_constraintStart_toEndOf="@id/tvProductRate"
             app:layout_constraintTop_toTopOf="@id/tvProductRateLabel"
