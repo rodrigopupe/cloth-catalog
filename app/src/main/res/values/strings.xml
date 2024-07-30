@@ -4,4 +4,9 @@
     <string name="catalog_list_title">Escolha um produto para visualizar os detalhes</string>
 
     <string name="product_list_response_error">Erro ao buscar a lista de produtos. Tente novamente mais tarde</string>
+
+    <string name="category_label">Categoria</string>
+
+    <string name="price_label">Preço</string>
+
 </resources>
