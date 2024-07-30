@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rmp.clothcatalog.databinding.FragmentProductDetailsBinding
 import com.rmp.clothcatalog.utils.setImageFromUrl
@@ -44,6 +45,10 @@ class ProductDetailsFragment : Fragment() {
                 tvCategory.text = category
                 tvPrice.text = price.toCurrencyFormatted()
                 tvProductRate.text = rating.toFormattedRating()
+
+                btBack.setOnClickListener {
+                    findNavController().navigateUp()
+                }
             }
         }
     }

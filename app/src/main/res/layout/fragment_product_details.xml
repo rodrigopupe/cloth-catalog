@@ -11,6 +11,15 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/spacing_extra_small">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_extra_small"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvProductName"
             style="@style/productDetailTitleStyle"
@@ -20,7 +29,7 @@
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btBack"
             tools:text="Product Name" />
 
         <androidx.appcompat.widget.AppCompatImageView
