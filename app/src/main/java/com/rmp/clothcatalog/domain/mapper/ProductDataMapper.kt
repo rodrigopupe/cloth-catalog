@@ -12,16 +12,7 @@ class ProductDataMapper() {
             description = data.description,
             category = data.category,
             imageUrl = data.image,
-            rating = ProductRatingMapper().fromRemote(data.rating)
-        )
-    }
-}
-
-class ProductRatingMapper() {
-    fun fromRemote(data: ProductResponseModel.Rating): ProductUIModel.Rating {
-        return ProductUIModel.Rating(
-            rate = data.rate,
-            count = data.count
+            rating = data.rating.rate
         )
     }
 }

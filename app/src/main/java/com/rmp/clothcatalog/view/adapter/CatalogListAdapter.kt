@@ -38,7 +38,7 @@ class CatalogListAdapter(
                 ivProduct.setImageFromUrl(item.imageUrl)
                 tvProductName.text = item.title
                 tvProductPrice.text = item.price.toCurrencyFormatted()
-                tvProductRate.text = item.rating.rate.toFormattedRating()
+                tvProductRate.text = item.rating.toFormattedRating()
 
                 root.setOnClickListener { onItemClick(item) }
             }

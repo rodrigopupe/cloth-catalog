@@ -11,13 +11,5 @@ data class ProductUIModel(
     val description: String,
     val category: String,
     val imageUrl: String,
-    val rating: Rating
-) : Parcelable {
-
-    @Parcelize
-    data class Rating(
-        val rate: Float,
-        val count: Int
-    ) : Parcelable
-}
-
+    val rating: Float
+) : Parcelable

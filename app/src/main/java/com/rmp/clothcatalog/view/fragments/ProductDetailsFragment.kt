@@ -43,7 +43,7 @@ class ProductDetailsFragment : Fragment() {
                 tvProductDescription.text = description
                 tvCategory.text = category
                 tvPrice.text = price.toCurrencyFormatted()
-                tvProductRate.text = rating.rate.toFormattedRating()
+                tvProductRate.text = rating.toFormattedRating()
             }
         }
     }
