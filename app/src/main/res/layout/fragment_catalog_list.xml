@@ -34,6 +34,10 @@
         tools:visibility="visible" />
 
     <include
+        android:id="@+id/includeErrorData"
+        layout="@layout/include_error_data" />
+
+    <include
         android:id="@+id/includeLoading"
         layout="@layout/include_loading" />
 

@@ -9,8 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
-import com.rmp.clothcatalog.R
 import com.rmp.clothcatalog.databinding.FragmentCatalogListBinding
 import com.rmp.clothcatalog.utils.BaseState
 import com.rmp.clothcatalog.view.CatalogListViewModel
@@ -90,16 +88,23 @@ class CatalogListFragment : Fragment() {
     }
 
     private fun showErrorMessage(message: String) {
-        Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
-            .setAction(R.string.repeat_label) { loadData() }
-            .show()
+        with(binding.includeErrorData) {
+            tvErrorMessage.text = message
+
+            btTryAgain.setOnClickListener {
+                loadData()
+                root.visibility = View.GONE
+            }
+
+            root.visibility = View.VISIBLE
+        }
     }
 
     private fun showLoading() {
-        binding.includeLoading.progressIndicator.visibility = View.VISIBLE
+        binding.includeLoading.root.visibility = View.VISIBLE
     }
 
     private fun hideLoading() {
-        binding.includeLoading.progressIndicator.visibility = View.GONE
+        binding.includeLoading.root.visibility = View.GONE
     }
 }

@@ -3,7 +3,7 @@
 
     <string name="catalog_list_title">Escolha um produto</string>
 
-    <string name="product_list_response_error">Erro ao buscar a lista de produtos. Tente novamente mais tarde</string>
+    <string name="product_list_response_error">Erro ao buscar a lista de produtos. Toque no botão para tentar novamente</string>
 
     <string name="category_label">Categoria</string>
 
@@ -11,6 +11,6 @@
 
     <string name="rating_label">Avaliações</string>
 
-    <string name="repeat_label">Repetir</string>
+    <string name="try_again_label">Tentar novamente</string>
 
 </resources>

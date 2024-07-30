@@ -27,7 +27,7 @@ class CatalogListViewModel @Inject constructor(
     fun getProductsList() {
         viewModelScope.launch {
             _productsResponse.value = BaseState.Loading
-            delay(3000) // Pra dar tempo do Loading ser exibido na tela rs
+            delay(2000) // Pra dar tempo do Loading ser exibido na tela rs
             try {
                 val data = productsRepository.getProductsList()
                 _productsResponse.value = BaseState.Success(data)
