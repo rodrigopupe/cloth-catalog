@@ -9,4 +9,6 @@
 
     <string name="price_label">Preço</string>
 
+    <string name="rating_label">Avaliações</string>
+
 </resources>
