@@ -1,16 +1,15 @@
 package com.rmp.clothcatalog.view.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.NavDestination
-import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import com.rmp.clothcatalog.R
 import com.rmp.clothcatalog.databinding.FragmentCatalogListBinding
 import com.rmp.clothcatalog.utils.BaseState
@@ -44,7 +43,13 @@ class CatalogListFragment : Fragment() {
         registerObservers()
         setupView()
 
-        viewModel.getProductsList()
+        loadData()
+    }
+
+    private fun loadData() {
+        if ((viewModel.productsResponse.value is BaseState.Success).not()) {
+            viewModel.getProductsList()
+        }
     }
 
     private fun registerObservers() {
@@ -66,15 +71,16 @@ class CatalogListFragment : Fragment() {
 
             is BaseState.Success -> updateList(it.data)
 
-            is BaseState.Error -> {
-                // TODO Implementar
-            }
+            is BaseState.Error -> showErrorMessage(it.errorMessage)
         }
     }
 
     private fun updateList(list: List<ProductUIModel>) {
         catalogAdapter.submitList(list)
-        binding.rvProductsCatalog.visibility = View.VISIBLE
+        with(binding) {
+            tvMessage.visibility = View.VISIBLE
+            rvProductsCatalog.visibility = View.VISIBLE
+        }
     }
 
     private fun onProductClick(product: ProductUIModel) {
@@ -83,11 +89,17 @@ class CatalogListFragment : Fragment() {
         )
     }
 
+    private fun showErrorMessage(message: String) {
+        Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
+            .setAction(R.string.repeat_label) { loadData() }
+            .show()
+    }
+
     private fun showLoading() {
-        binding.progressIndicator.visibility = View.VISIBLE
+        binding.includeLoading.progressIndicator.visibility = View.VISIBLE
     }
 
     private fun hideLoading() {
-        binding.progressIndicator.visibility = View.GONE
+        binding.includeLoading.progressIndicator.visibility = View.GONE
     }
 }

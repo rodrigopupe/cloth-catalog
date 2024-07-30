@@ -2,5 +2,4 @@
 <resources>
     <dimen name="spacing">24dp</dimen>
     <dimen name="titleSpacing">24dp</dimen>
-    <dimen name="titleFontSize">16sp</dimen>
 </resources>
