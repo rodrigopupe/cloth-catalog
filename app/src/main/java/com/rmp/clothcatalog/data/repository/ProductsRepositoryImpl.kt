@@ -13,11 +13,11 @@ class ProductsRepositoryImpl @Inject constructor(
 ) : ProductsRepository {
 
     override suspend fun getProductsList(): List<ProductUIModel> {
-        val result = withContext(Dispatchers.IO) {
-            service.getProductsList()
-        }
+        return withContext(Dispatchers.IO) {
+            val result = service.getProductsList()
 
-        val mapper = ProductDataMapper()
-        return result.map { mapper.fromRemote(it) }
+            val mapper = ProductDataMapper()
+            result.map { mapper.fromRemote(it) }
+        }
     }
 }
