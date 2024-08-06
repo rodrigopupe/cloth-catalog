@@ -45,6 +45,7 @@ class CatalogListFragment : Fragment() {
     }
 
     private fun loadData() {
+        // Pra evitar o reload dos dados sempre que voltar da tela de detalhes
         if ((viewModel.productsResponse.value is BaseState.Success).not()) {
             viewModel.getProductsList()
         }
