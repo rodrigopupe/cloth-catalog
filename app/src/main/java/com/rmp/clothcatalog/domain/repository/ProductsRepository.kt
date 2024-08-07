@@ -1,4 +1,4 @@
-package com.rmp.clothcatalog.data.repository.contracts
+package com.rmp.clothcatalog.domain.repository
 
 import com.rmp.clothcatalog.view.model.ProductUIModel
 

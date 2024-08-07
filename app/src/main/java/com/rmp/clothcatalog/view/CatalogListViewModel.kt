@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.rmp.clothcatalog.R
-import com.rmp.clothcatalog.data.repository.contracts.ProductsRepository
+import com.rmp.clothcatalog.domain.repository.ProductsRepository
 import com.rmp.clothcatalog.utils.BaseState
 import com.rmp.clothcatalog.view.model.ProductUIModel
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -3,7 +3,7 @@ package com.rmp.clothcatalog.view
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.rmp.clothcatalog.MyApplication
 import com.rmp.clothcatalog.ProductMockData
-import com.rmp.clothcatalog.data.repository.contracts.ProductsRepository
+import com.rmp.clothcatalog.domain.repository.ProductsRepository
 import com.rmp.clothcatalog.utils.BaseState
 import com.rmp.clothcatalog.view.model.ProductUIModel
 import io.mockk.coEvery

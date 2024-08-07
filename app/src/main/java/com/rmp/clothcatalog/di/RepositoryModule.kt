@@ -2,7 +2,7 @@ package com.rmp.clothcatalog.di
 
 import com.rmp.clothcatalog.data.api.ProductsService
 import com.rmp.clothcatalog.data.repository.ProductsRepositoryImpl
-import com.rmp.clothcatalog.data.repository.contracts.ProductsRepository
+import com.rmp.clothcatalog.domain.repository.ProductsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
