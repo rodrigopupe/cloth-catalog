@@ -75,6 +75,9 @@ dependencies {
 
     implementation(libs.picasso)
 
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mockk)
+
     testImplementation(libs.androidx.core.testing)
     testImplementation(libs.androidx.lifecycle.runtime.testing)
 
