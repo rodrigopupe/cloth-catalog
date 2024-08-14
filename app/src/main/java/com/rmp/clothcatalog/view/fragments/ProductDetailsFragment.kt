@@ -11,9 +11,7 @@ import com.rmp.clothcatalog.databinding.FragmentProductDetailsBinding
 import com.rmp.clothcatalog.utils.setImageFromUrl
 import com.rmp.clothcatalog.utils.toCurrencyFormatted
 import com.rmp.clothcatalog.utils.toFormattedRating
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class ProductDetailsFragment : Fragment() {
 
     private val binding: FragmentProductDetailsBinding by lazy {
